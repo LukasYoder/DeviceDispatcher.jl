@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use DeviceDispatcher in your research, please cite it!"
+authors:
+- family-names: "Yoder"
+  given-names: "Lukas"
+title: "DeviceDispatcher: lightweight CPU <-> GPU data mover for heterogeneous computation"
+version: "1.0.0"
+doi: 10.5281/zenodo.15889538
+date-released: 2025-07-12
+url: https://github.com/LukasYoder/DeviceDispatcher.jl
+license: MIT

@@ -56,6 +56,7 @@ DeviceDispatcher.jl automatically hooks into it:
 ## Quick Start
 
 ```julia
+using CUDA                       # ... or your preferred backend
 using DeviceDispatcher           # exports dev, @gpu, @cpu ...
 using LinearAlgebra, Random
 
@@ -90,7 +91,7 @@ use_cpu!()                       # back to the host
 | `dev(x)`                    | Convert `x` **to** the current device (CPU -> GPU or GPU -> CPU). Cascades through tuples, named tuples, arrays of arrays, etc. |
 | `current_device()`          | `:cpu` or `:gpu` for the calling thread.                                                                                        |
 | `use_gpu!()` / `use_cpu!()` | Permanently flip the thread‑local device flag.                                                                                  |
-| `use\_device!(:cpu\|:gpu)`  | Convenience wrapper.                                                                                                            |
+| `use_device!(:cpu\|:gpu)`   | Convenience wrapper.                                                                                                            |
 | `@gpu ...`, `@cpu ...`      | Temporarily run a block on GPU / CPU and restore the previous state on exit (even on error).                                    |
 
 
